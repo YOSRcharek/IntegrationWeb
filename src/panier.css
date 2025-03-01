@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .navbar {
+        @apply flex justify-between items-center;
+    }
+
+    svg {
+        @apply w-full;
+        height: auto;
+    }
+
+    .text-xs {
+        @apply text-sm;
+    }
+
+    @media (min-width: 640px) {
+        .text-xs {
+            font-size: 0.75rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .text-xs {
+            font-size: 0.875rem;
+        }
+    }
+
+    #mobile-nav {
+        @apply hidden;
+    }
+
+    #mobile-nav div {
+        @apply flex flex-col items-center py-4;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-links {
+        display: none !important;
+    }
+    
+    #mobile-nav {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        background: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+}

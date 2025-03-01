@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .navbar {
+        @apply flex justify-between items-center; 
+    }
+
+    svg {
+        @apply w-full; 
+        height: auto; 
+    }
+
+    .text-xs {
+        @apply text-sm; 
+    }
+
+    @media (min-width: 640px) {
+        .text-xs {
+            font-size: 0.75rem; 
+        }
+    }
+
+    @media (max-width: 768px) {
+        .text-xs {
+            font-size: 0.875rem; 
+        }
+    }
+
+    #mobile-nav {
+        @apply hidden; 
+    }
+
+    #mobile-nav div {
+        @apply flex flex-col items-center py-4; 
+    }
+
+    .quantity-container {
+        @apply flex items-center justify-center space-x-4 mt-4; 
+    }
+
+    .quantity-button {
+        @apply h-10 w-10 bg-[#fcede9] rounded-lg shadow-md flex items-center justify-center; 
+        font-size: 24px; 
+        line-height: 1; 
+    }
+
+    .quantity-text {
+        @apply text-black text-[18px]; 
+        min-width: 40px; 
+        text-align: center; 
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-links {
+        display: none !important; 
+    }
+    
+    #mobile-nav {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        background: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .quantity-container {
+        @apply flex-col; 
+    }
+
+    .quantity-button {
+        width: 100%; 
+        margin-bottom: 10px; 
+    }
+
+    .quantity-text {
+        font-size: 16px; 
+    }
+}
+
+@media (min-width: 769px) {
+    .quantity-container {
+        @apply flex-row; 
+    }
+
+    .quantity-button {
+        width: 162px; 
+    }
+}
+
+html {
+    zoom: 1; 
+    -webkit-text-size-adjust: 100%; 
+}
