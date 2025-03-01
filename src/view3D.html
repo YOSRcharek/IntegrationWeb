@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try-On Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
+</head>
+<body class="bg-gray-100 flex flex-col items-center">
+    <!-- Navbar -->
+    <div class="relative"> 
+        <!-- Navbar -->
+        <ul class="flex items-center bg-white shadow-lg rounded-full px-6 py-3 h-20 w-3/4 mx-auto shadow-[0_6px_15px_rgba(0,0,0,0.1)] justify-between fixed top-10 left-1/2 transform -translate-x-1/2 z-50">
+            <!-- Logo -->
+            <li class="flex justify-start  pl-6">
+                <img src="../public/img/logoBizBoos.png" class="h-16 w-16"/>
+            </li>
+        
+            <!-- Menu Items -->
+            <div class="flex space-x-4 w-4/12 pl-6">
+                <li class="font-bold cursor-pointer hover:text-[#F6C8BC]">Home</li>
+                <li class="font-bold cursor-pointer text-[#FCEDE9]">Products</li>
+                <li class="font-bold cursor-pointer hover:text-[#FCEDE9]">Services</li>
+                <li class="font-bold cursor-pointer hover:text-[#FCEDE9]">About Us</li>
+            </div>
+        
+            <!-- Barre de recherche -->
+            <li class="w-1/4 flex justify-center">
+                <div class="flex items-center bg-gray-200 rounded-full px-4 py-2 cursor-pointer w-56">
+                    <span class="text-gray-500 flex-1 text-left pl-2">Search products...</span>
+                    <img src="../public/img/search6921-jlzi.svg" class="w-5 h-5" />
+                </div>
+            </li>
+        
+            <!-- Bouton Discussion -->
+            <li class="w-1/6 flex justify-center">
+                <button class="bg-[#FCEDE9] text-black px-6 py-2 rounded-full shadow-md hover:bg-[#F6C8BC]">Discussion</button>
+            </li>
+        
+            <!-- Icônes -->
+            <div class="flex justify-end space-x-4 w-1/6 pr-6">
+                <li class="relative">
+                    <img src="../public/img/ajouter-aux-favoris.png" class="w-6 h-6" />
+                    <span class="absolute -top-2 -right-2 bg-[#F6C8BC] text-white text-xs rounded-full px-1">0</span>
+                </li>
+                <li class="relative">
+                    <img src="../public/img/panier.png" class="w-6 h-6" />
+                    <span class="absolute -top-2 -right-2 bg-[#F6C8BC] text-white text-xs rounded-full px-1">0</span>
+                </li>
+                <li><img src="../public/img/utilisateur (1).png" class="w-6 h-6" /></li>
+                <li><img src="../public/img/langue.png" class="w-6 h-6" /></li>
+            </div>
+            
+        </ul>     
+    </div>
+    
+ <!-- Breadcrumb -->
+
+ <div class="mt-32 mb-4 ml-10 w-11/12"> <!-- Augmenté mt-20 à mt-32 -->
+    <div class="w-fit text-left text-gray-600 border border-[#F6C8BC] rounded-lg bg-white mt-8 p-1.5 ml-44 mr-40">
+      <a href="#" class="text-black hover:underline">Products</a> > 
+      <a href="#" class="text-black hover:underline">Product details</a> > 
+      <span class="text-[#F6C8BC]">3D Viewer</span>
+    </div>
+</div>
+
+  
+
+
+    <!-- Main Content -->
+    <div class="mt-25 bg-white w-11/12 max-w-4xl p-8 rounded-2xl shadow-lg mt-5 text-center">
+        <div class="relative bg-gradient-to-b from-red-200 to-white p-5 rounded-lg">
+            <model-viewer src="../public/img/polo_shirt.glb" auto-rotate camera-controls class="w-full h-96"></model-viewer>
+        </div>
+        <p class="mt-4 font-bold">Choose a Color</p>
+        <div class="flex justify-center gap-3 mt-3">
+            <button class="w-9 h-9 flex items-center justify-center rounded-full bg-teal-700 border-4 border-white shadow-lg ring-2 ring-teal-900">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="white" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+            </button>
+        
+            <button class="w-8 h-8 rounded-full bg-lime-400 shadow-lg"></button>
+            <button class="w-8 h-8 rounded-full bg-indigo-300 shadow-lg"></button>
+            <button class="w-8 h-8 rounded-full bg-orange-300 shadow-lg"></button>
+            <button class="w-8 h-8 rounded-full bg-red-600 shadow-lg"></button>
+        </div>
+        
+      
+    </div>
+    <div class="w-9/12 max-w-3xl h-15 p-4 rounded-3xl shadow-lg mt-5 text-center bg-gradient-to-r from-[#FCEDE9] to-[#F6C8BC] flex items-center justify-center">
+        <h2 class="text-xl font-bold">Polo T-Shirt - 50 Dinars</h2>
+    </div>
+    
+    <div class="flex justify-center gap-4 mt-4">
+        <button class="flex items-center gap-2 bg-white text-black border border-[#F6C8BC] px-6 py-2 rounded-full shadow-md hover:bg-[#FCEDE9]">
+            <img src="../public/img/people.png" class="w-5 h-5" alt="Try On">
+            <span>Try On</span>
+        </button>
+    
+        <button class="flex items-center gap-2 bg-[#F6C8BC] text-black px-6 py-2 rounded-full shadow-md hover:bg-[#FCEDE9]">
+            <img src="../public/img/purchase (1).png" class="w-5 h-5" alt="Shop Now">
+            <span>Shop Now</span>
+        </button>
+    </div>
+    
+    <!-- Footer -->
+    
+    <div class="footer bg-gray-200 relative h-[450px] flex flex-col items-center overflow-hidden px-[312px] py-[42px] pb-[99px] gap-[60px] cursor-pointer mt-[50px]">
+         <div class="container flex justify-center items-start w-full max-w-[1040px]">
+            <div class="flex flex-wrap justify-between w-full gap-10">
+                <!-- Logo + Description -->
+                <div class="flex flex-col gap-3 max-w-[200px]">
+                    <h2 class="text-lg font-bold text-black">BizBooster</h2>
+                    <p class="text-sm text-black leading-[20px]">
+                        Welcome to our Platform! You can share your small business here safely and we guarantee that you will get the best experience!
+                    </p>
+                </div>
+    
+                <!-- Produits -->
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-base font-bold text-black">Products</h3>
+                    <ul class="text-base text-black space-y-2">
+                        <li>Clothes</li>
+                        <li>Accessories</li>
+                        <li>Beauty and Care</li>
+                        <li>Handmade sweets</li>
+                        <li>Wearable Electronics</li>
+                    </ul>
+                </div>
+    
+                <!-- Services -->
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-base font-bold text-black">Services</h3>
+                    <ul class="text-base text-black space-y-2">
+                        <li>Educational</li>
+                        <li>Information Technology</li>
+                        <li>Personal</li>
+                    </ul>
+                </div>
+    
+                <!-- Aide -->
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-base font-bold text-black">Questions about our services</h3>
+                    <ul class="text-base text-black space-y-2">
+                        <li>User Helps</li>
+                        <li>Contact Us</li>
+                        <li>About Us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Contact et abonnement -->
+        <div class="w-full max-w-[1040px] flex flex-wrap items-center justify-between gap-6">
+            <!-- Coordonnées -->
+            <div class="flex gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="../public/img/phone5821-fy3q.svg" alt="phone" class="w-6 h-6">
+                    <span class="text-lg font-bold text-black">+216 73564822</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img src="../public/img/mail5821-qrj.svg" alt="mail" class="w-6 h-6">
+                    <span class="text-lg font-bold text-black">Bizbooster@gmail.com</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img src="../public/img/mappin5821-m1ha.svg" alt="location" class="w-6 h-6">
+                    <span class="text-lg font-bold text-black">Ariana Soghra, Tunisie</span>
+                </div>
+            </div>
+        
+            <!-- Subscription -->
+            <div class="flex items-center gap-3">
+                <h3 class="text-lg font-bold text-black">Subscribe</h3>
+                <div class="flex items-center border border-gray-300 rounded-lg bg-white p-2">
+                    <input type="email" placeholder="Email address" class="flex-1 text-sm text-gray-500 outline-none p-2">
+                    <button class="bg-red-200 p-3 rounded-r-lg">
+                        <img src="../public/img/iconlucideicon5821-ehf.svg" alt="subscribe" class="w-6 h-6">
+                    </button>
+                </div>
+            </div>
+        
+            <!-- Réseaux sociaux -->
+            <div class="flex gap-4">
+                <a href="#" class="w-6 h-6">
+                    <img src="../public/img/Group.png" alt="facebook">
+                </a>
+                <a href="#" class="w-6 h-6">
+                    <img src="../public/img/Group (1).png" alt="instagram">
+                </a>
+                <a href="#" class="w-6 h-6">
+                    <img src="../public/img/Group (2).png" alt="youtube">
+                </a>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+      
+</body>
+</html>
